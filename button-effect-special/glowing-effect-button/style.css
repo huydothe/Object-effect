@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.glowing-effect-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 20px 64px;
+  font-size: 16px;
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  transition: all 1s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.glowing-effect-button:hover {
+  background-color: red;
+  text-shadow: 4px 4px 4px black;
+  transform: translate(10px, -10px);
+}
+
+.glowing-effect-button:before {
+  content: "";
+  position: absolute;
+  background-color: yellow;
+  width: 100%;
+  height: 20px;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%) rotate(45deg);
+  transition: transform 0.8s;
+}
+
+.glowing-effect-button:hover:before {
+  transform: translateX(100%) rotate(45deg);
+}

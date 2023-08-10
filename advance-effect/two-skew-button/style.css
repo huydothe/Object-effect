@@ -1,0 +1,59 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.skew {
+  display: inline-flex;
+  width: 240px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.5s;
+  color: black;
+  /* border: 1px solid black; */
+  cursor: pointer;
+  /* overflow: hidden; */
+  font-size: 24px;
+  font-weight: 600;
+  background-color: transparent;
+}
+.skew:before,
+.skew:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  transform: skewX(30deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.skew:before {
+  left: 0;
+  top: -5px;
+  background-color: red;
+}
+
+.skew:after {
+  left: 52.5%;
+  bottom: -5px;
+  background-color: yellow;
+}
+
+.skew:hover:before {
+  transform: skewX(0);
+  left: 50%;
+  top: 0;
+}
+
+.skew:hover:after {
+  transform: skewX(0);
+  left: 0%;
+  top: 0;
+}

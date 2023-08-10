@@ -1,0 +1,72 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.cuts-button-effect {
+  display: inline-flex;
+  width: 240px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 2s;
+  border: 2px solid black;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.inner {
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  transition-delay: 0.25s;
+  background-color: transparent;
+  z-index: 3;
+}
+
+span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 2;
+}
+
+span:before {
+  content: "";
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transition: all 0.5s;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  z-index: 4;
+}
+
+.cuts-button-effect:hover .inner {
+  color: white;
+}
+
+.cuts-button-effect:hover span:before {
+  width: 100%;
+  background-color: black;
+  transform: rotate(60deg) translateX(-100%);
+}

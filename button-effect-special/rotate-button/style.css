@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.rotate-button {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 8px 32px;
+  height: 50px;
+  font-family: sans-serif;
+  position: relative;
+  overflow: hidden;
+  color: black;
+  font-size: 16px;
+  transition: color 1s ease-in;
+}
+
+.rotate-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: blueviolet;
+  height: 100%;
+  width: 100%;
+  /* border-radius: 50%; */
+  z-index: -1;
+  /* transform-origin: bottom left; */
+  transform: translateX(-100%);
+  transition: transform 1s ease-out;
+}
+
+.rotate-button:hover {
+  color: white;
+}
+
+.rotate-button:hover:before {
+  transform: translateX(0);
+}

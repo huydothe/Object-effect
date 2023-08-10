@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/image-effect/caption-bottom/style.css"
+    />
+  </head>
+  <body>
+    <div class="img-wrapper">
+      <img src="/public/image/deer.jpg" />
+      <div class="caption" id="captionId">
+        <h1>Amazing caption!</h1>
+        <p>Write anything you want</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    const caption = document.getElementById("captionId");
+    const captionHeight = -caption.clientHeight + 'px';
+    document.documentElement.style.setProperty(
+      "--caption-width",
+      captionHeight
+    );
+    const data = getComputedStyle(document.documentElement)
+    .getPropertyValue('--caption-width')
+    console.log("data", data);
+  </script>
+</html>
