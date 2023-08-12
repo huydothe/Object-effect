@@ -1,0 +1,104 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  justify-content: space-between;
+}
+
+.text {
+  color: black;
+  padding: 4px 8px;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 16px 24px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.division {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.2s;
+}
+
+.button:after,
+.button::before,
+.division::after,
+.division::before {
+  content: "";
+  position: absolute;
+  transition: all 0.15s;
+}
+
+.button::before,
+.division::before {
+  width: 30%;
+  height: 3px;
+}
+
+.button::after,
+.division::after {
+  width: 3px;
+  height: 30%;
+}
+
+.button::before,
+.button::after {
+  left: 24px;
+  top: 16px;
+}
+.division::before,
+.division::after {
+  right: 24px;
+  bottom: 16px;
+}
+
+.button:hover::before,
+.button:hover::after {
+  left: 12px;
+  top: 8px;
+  background-color: rgb(255, 0, 128);
+  transition-delay: 0.25s;
+}
+
+.division:hover::before,
+.division:hover::after {
+  bottom: 8px;
+  right: 12px;
+  background-color: rgb(255, 0, 128);
+  transition-delay: 0.25s;
+}
+
+.button:hover .text {
+  background-color: rgb(255, 0, 128);
+  color: white;
+}
