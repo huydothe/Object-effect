@@ -37,6 +37,46 @@ body {
   font-weight: 500;
   padding: 16px 24px;
   cursor: pointer;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: all 0.3s;
+}
+
+.division {
+  position: absolute;
+  bottom: -3px;
+  height: 5px;
+  width: 100%;
+  z-index: 10;
+}
+
+.division::before,
+.division::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.19, -0.75, 0.92, 1.64);
+}
+
+.division::before {
+  background-color: palevioletred;
+  border-radius: 0 4px 4px 0;
+  left: 50%;
+}
+
+.division::after {
+  background-color: blueviolet;
+  border-radius: 4px 0 0 4px;
+  left: 0%;
+}
+
+.button:hover .division:before {
+  left: 0%;
+  border-radius: 4px 0 0 4px;
+}
+
+.button:hover .division:after {
+  left: 50%;
+  border-radius: 0 4px 4px 0;
 }
