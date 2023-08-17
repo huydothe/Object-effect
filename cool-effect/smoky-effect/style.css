@@ -1,0 +1,42 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+#interboard {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.wrapper {
+  height: auto;
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 64px;
+  font-weight: 800px;
+  color: white;
+  transition: all 1s;
+}
+
+.space {
+  width: 16px;
+  height: 64px;
+}
+
+.wrapper:hover .text{
+  transform: rotate(45deg) translateY(-100px);
+  opacity: 0;
+  filter: blur(10px);
+}
