@@ -1,0 +1,56 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: inline-flex;
+  justify-content: center;
+  height: auto;
+}
+
+.icon-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  background-color: white;
+  margin: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 5px 15px -5px #00000070;
+  align-items: center;
+  overflow: hidden;
+}
+
+.icon-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 125%;
+  left: -150%;
+  height: 170%;
+  width: 170%;
+  background-color: rgb(34, 238, 170);
+  transform: rotateZ(45deg);
+  transition: all 1s cubic-bezier(0.72, 2.05, 0.86, 0.61);
+}
+
+i {
+  color: rgb(34, 238, 170);
+  transition: all 0.5s;
+  z-index: 2;
+}
+
+.icon-wrapper:hover i {
+  transform: scale(1.4);
+  color: white;
+}
+
+.icon-wrapper:hover::before {
+  top: -20px;
+  left: -20px;
+}
