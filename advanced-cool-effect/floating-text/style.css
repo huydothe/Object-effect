@@ -1,0 +1,36 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #26de81;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 90px;
+  font-weight: 800;
+  text-shadow: 0 1px 0 #efefef, 0 2px 0 #efefef, 0 3px 0 #efefef,
+    0 4px 0 #efefef, 0 30px 5px rgba(0, 0, 0, 0.1);
+  animation: bloom 3s linear infinite alternate;
+}
+
+@keyframes bloom {
+  0% {
+    transform: rotate(-5deg) translateX(-20px);
+  }
+  100% {
+    transform: rotate(5deg) translateX(20px);
+  }
+}

@@ -1,0 +1,34 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(27, 230, 162);
+}
+
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  font-size: 64px;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  transform-origin: center;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  50% {
+    transform: rotateX(0) rotateY(180deg);
+  }
+  100% {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+}
