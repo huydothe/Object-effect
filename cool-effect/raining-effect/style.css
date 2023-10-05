@@ -1,0 +1,24 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url("/public/image/bg.jpg");
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: url("/public/image/rain.png");
+  background-position: 0% 0%;
+  animation: rainning 0.3s linear infinite;
+}
+
+@keyframes rainning {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 20% 100%;
+  }
+}

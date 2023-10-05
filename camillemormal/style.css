@@ -1,0 +1,21 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.image-tracker {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+}
+
+.image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin: 0 12px;
+}
